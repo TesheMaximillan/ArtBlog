@@ -1,0 +1,28 @@
+.header-container {
+  @include maxContinerWidth;
+  &__logo-box {
+    display: none;
+    font-family: $display-font;
+    font-weight: 900;
+    font-size: 4rem;
+    margin: 2rem;
+    color: var(--color-primary);
+
+    span {
+      background: linear-gradient(var(--color-primary), var(--color-dark), var(--color-grey));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-size: 5rem;
+    }
+  }
+
+  &__nav-bar {
+    &--icon {
+      display: inline-block;
+      width: 5rem;
+      height: 5rem;
+      fill: var(--color-dark-2);
+      margin: 2rem 3rem;
+    }
+  }
+}

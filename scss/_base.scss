@@ -1,0 +1,46 @@
+@import url('http://fonts.cdnfonts.com/css/cocogoose');
+@import url('http://fonts.cdnfonts.com/css/lato');
+
+:root {
+  --color-primary: #ec5242;
+  --color-dark: #272a31;
+  --color-dark-2: #272a31cc;
+  --color-grey: #d3d3d3;
+}
+
+$bp-large: 48em; // Default pixel size = 16px, 16px = 1em
+$display-font: 'cocogoose', sans-serif;
+$default-font: 'lato', sans-serif;
+
+@mixin maxContinerWidth {
+  max-width: 120rem;
+  margin: 0 auto;
+}
+
+// ///////////////////////////// Global Reset
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; // 1rem = 10px, 10px/16px = 62.5%
+
+  @media only screen and (min-width: $bp-large) {
+      // font-size: 50%;
+  }
+}
+
+body {
+  font-family: "lato", sans-serif;
+  font-weight: 400;
+  line-height: 1.6;
+  color: var(--color-dark);
+}

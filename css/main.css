@@ -1,0 +1,63 @@
+@import url("http://fonts.cdnfonts.com/css/cocogoose");
+@import url("http://fonts.cdnfonts.com/css/lato");
+:root {
+  --color-primary: #ec5242;
+  --color-dark: #272a31;
+  --color-dark-2: #272a31cc;
+  --color-grey: #d3d3d3;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "lato", sans-serif;
+  font-weight: 400;
+  line-height: 1.6;
+  color: var(--color-dark);
+}
+
+.header-container {
+  max-width: 120rem;
+  margin: 0 auto;
+}
+
+.header-container__logo-box {
+  display: none;
+  font-family: "cocogoose", sans-serif;
+  font-weight: 900;
+  font-size: 4rem;
+  margin: 2rem;
+  color: var(--color-primary);
+}
+
+.header-container__logo-box span {
+  background: -webkit-gradient(linear, left top, left bottom, from(var(--color-primary)), color-stop(var(--color-dark)), to(var(--color-grey)));
+  background: linear-gradient(var(--color-primary), var(--color-dark), var(--color-grey));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 5rem;
+}
+
+.header-container__nav-bar--icon {
+  display: inline-block;
+  width: 5rem;
+  height: 5rem;
+  fill: var(--color-dark-2);
+  margin: 2rem 3rem;
+}
