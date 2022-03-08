@@ -2,13 +2,14 @@
 @import url("http://fonts.cdnfonts.com/css/lato");
 :root {
   --color-primary: #ec5242;
+  --color-primary-light: rgba(236, 83, 66, 0.9);
   --color-dark: #272a31;
   --color-dark-2: #272a31cc;
   --color-grey: #d3d3d3;
   --color-grey-light: #f9f9f9;
   --color-white: #fff;
-  --shadow-dark: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px;
-  --shadow-light: 0 2rem 5rem rgba(0,0,0,.06);
+  --shadow-dark: rgba(0, 0, 0, 0.1) 0 10px 15px -3px;
+  --shadow-light: 0 2rem 5rem rgba(0, 0, 0, 0.06);
 }
 
 * {
@@ -29,17 +30,73 @@ html {
   font-size: 62.5%;
 }
 
-@media only screen and (max-width: 48em) {
-  html {
-    font-size: 50%;
-  }
-}
-
 body {
   font-family: "lato", sans-serif;
   font-weight: 400;
   line-height: 1.6;
   color: var(--color-dark);
+}
+
+.navigation {
+  display: none;
+  background-color: var(--color-dark);
+}
+
+.navigation__top-nav {
+  max-width: 120rem;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.navigation ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.navigation ul .nav-item {
+  text-decoration: none;
+  padding: 1rem 2rem;
+  list-style: none;
+  position: relative;
+}
+
+.navigation ul .nav-item a {
+  text-decoration: none;
+  color: var(--color-white);
+  font-size: 1.5rem;
+}
+
+.navigation ul .nav-item::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 1px;
+  bottom: 0;
+  background-color: var(--color-primary);
+  -webkit-transition: all ease-in-out 0.3s;
+  transition: all ease-in-out 0.3s;
+  left: 0;
+}
+
+.navigation ul .nav-item:hover::after {
+  width: 100%;
+}
+
+.navigation ul .nav-item__icon {
+  display: inline-block;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  width: 2rem;
+  height: 2rem;
+  fill: var(--color-white);
+  cursor: pointer;
 }
 
 .header {
@@ -62,7 +119,7 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 0rem 2rem;
+  padding: 0 2rem;
 }
 
 .header-nav-container__logo-box {
@@ -82,11 +139,14 @@ body {
 
 .header-nav-container__nav-bar--icon {
   display: inline-block;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
   width: 3rem;
   height: 3rem;
   fill: var(--color-dark-2);
-  margin: 2rem 3rem;
   cursor: pointer;
+  margin: 2rem 3rem;
 }
 
 .header-nav-container__nav-bar--icon .icon-cross {
@@ -116,12 +176,12 @@ body {
 .header-nav-container__nav-bar--link .nav-link::after {
   content: '';
   position: absolute;
-  width: 0px;
+  width: 0;
   height: 1px;
   bottom: 0;
   background-color: var(--color-primary);
-  -webkit-transition: all ease-in-out .3s;
-  transition: all ease-in-out .3s;
+  -webkit-transition: all ease-in-out 0.3s;
+  transition: all ease-in-out 0.3s;
   left: 0;
 }
 
@@ -129,11 +189,95 @@ body {
   width: 100%;
 }
 
+.header-nav-container__nav-bar .your-blog {
+  display: none;
+  padding: 0 2rem;
+  border: 5px solid var(--color-primary);
+  margin-left: 5rem;
+  background-color: var(--color-white);
+  color: #D52815;
+  font-weight: 600;
+  font-size: 1.6rem;
+  cursor: pointer;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+.header-nav-container__nav-bar .your-blog:hover {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+}
+
+.header-nav-container__nav-bar .your-blog:active {
+  -webkit-transform: translateY(-2px);
+          transform: translateY(-2px);
+}
+
+.header-body {
+  max-width: 120rem;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.header-body__greeting-text {
+  color: var(--color-primary);
+  font-weight: 600;
+  font-size: 3.5rem;
+  line-height: 1.6;
+}
+
+.header-body__main-title {
+  background: url(../assets/images/pexels-pixabay-73873-min.jpg);
+  background-size: cover;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-transform: uppercase;
+  font-family: "cocogoose", sans-serif;
+  color: var(--color-primary);
+  font-weight: 600;
+  font-size: 5rem;
+  line-height: 1.2;
+  margin-bottom: 2rem;
+}
+
+.header-body__main-title span {
+  display: block;
+}
+
+.header-body__header-desc {
+  border: 2px solid var(--color-white);
+  padding: 2rem;
+  max-width: 48rem;
+  font-size: 1.6rem;
+  font-weight: 500;
+}
+
+.header-body__event-time {
+  margin-top: 2rem;
+  font-family: "cocogoose", sans-serif;
+  font-size: 3rem;
+  color: var(--color-dark-2);
+}
+
+.header-body__event-place {
+  font-size: 1.8rem;
+}
+
 @media only screen and (min-width: 48em) {
+  .navigation {
+    display: block;
+  }
   .header-nav {
     -webkit-box-shadow: var(--shadow-dark);
             box-shadow: var(--shadow-dark);
     background-color: var(--color-white);
+  }
+  .header-nav-container__nav-bar {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
   }
   .header-nav-container__nav-bar--icon {
     display: none;
@@ -143,6 +287,21 @@ body {
     display: -ms-flexbox;
     display: flex;
   }
+  .header-nav-container .your-blog {
+    display: inline-block;
+  }
+  .sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
+  .content {
+    padding-top: 8rem;
+  }
+  .header-body {
+    padding: 8rem 0;
+    height: calc(100vh - 12.48rem);
+  }
 }
 
 .hide-icon {
@@ -151,8 +310,8 @@ body {
 
 .nav-mobile {
   display: none;
-  background-image: -webkit-gradient(linear, left top, right bottom, color-stop(70%, rgba(211, 211, 211, 0.8)), to(rgba(236, 83, 66, 0.808)));
-  background-image: linear-gradient(to right bottom, rgba(211, 211, 211, 0.8) 70%, rgba(236, 83, 66, 0.808));
+  background-image: -webkit-gradient(linear, left top, right bottom, color-stop(70%, rgba(211, 211, 211, 0.9)), to(rgba(236, 83, 66, 0.808)));
+  background-image: linear-gradient(to right bottom, rgba(211, 211, 211, 0.9) 70%, rgba(236, 83, 66, 0.808));
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -167,6 +326,7 @@ body {
   z-index: 10;
   border-top: 2px solid var(--color-primary);
   overflow: hidden;
+  cursor: pointer;
 }
 
 .nav-mobile .nav-link a {

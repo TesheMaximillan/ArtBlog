@@ -4,7 +4,7 @@
 
 .nav-mobile {
   display: none;
-  background-image: linear-gradient(to right bottom, rgba(211, 211, 211, 0.8) 70%, rgba(236, 83, 66, 0.808));
+  background-image: linear-gradient(to right bottom, rgba(211, 211, 211, 0.9) 70%, rgba(236, 83, 66, 0.808));
   flex-direction: column;
   align-items: center;
   padding-top: 10rem;
@@ -14,6 +14,7 @@
   z-index: 10;
   border-top: 2px solid var(--color-primary);
   overflow: hidden;
+  cursor: pointer;
 
   .nav-link {
     a {
