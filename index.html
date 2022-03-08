@@ -15,16 +15,37 @@
       <nav class="navigation__top-nav"></nav>
     </div>
     <header class="header">
-      <div class="header-container">
-        <div class="header-container__logo-box"> <span>Art</span>~Blog</div>
-        <nav class="header-container__nav-bar">
-          <svg class="header-container__nav-bar--icon">
-            <use xlink:href="assets/Icons/sprite.svg#icon-menu"></use>
-          </svg>
-          <ul class="header-container__nav-bar--link">
+      <div class="header-nav">
+        <div class="header-nav-container">
+          <div class="header-nav-container__logo-box"> <span>Art</span>~Blog</div>
+          <nav class="header-nav-container__nav-bar">
+            <div class="header-nav-container__nav-bar--icon" id="hamberger">
+              <svg class="header-nav-container__nav-bar--icon icon-menu">
+                <use xlink:href="assets/Icons/sprite.svg#icon-menu"></use>
+              </svg>
+              <svg class="header-nav-container__nav-bar--icon icon-cross">
+                <use xlink:href="assets/Icons/sprite.svg#icon-cross"></use>
+              </svg>
+            </div>
+            <ul class="header-nav-container__nav-bar--link">
+              <li class="nav-link"><a href="">About</a></li>
+              <li class="nav-link"><a href="">Program</a></li>
+              <li class="nav-link"><a href="">Join</a></li>
+              <li class="nav-link"><a href="">Sponsor</a></li>
+              <li class="nav-link"><a href="">News</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+      <ul class="header-nav-container__nav-bar--link nav-mobile">
+        <li class="nav-link"><a href="">About</a></li>
+        <li class="nav-link"><a href="">Program</a></li>
+        <li class="nav-link"><a href="">Join</a></li>
+        <li class="nav-link"><a href="">Sponsor</a></li>
+        <li class="nav-link"><a href="">News</a></li>
+      </ul>
+      <div class="header-body">
 
-          </ul>
-        </nav>
       </div>
 
     </header>

@@ -5,6 +5,10 @@
   --color-dark: #272a31;
   --color-dark-2: #272a31cc;
   --color-grey: #d3d3d3;
+  --color-grey-light: #f9f9f9;
+  --color-white: #fff;
+  --shadow-dark: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px;
+  --shadow-light: 0 2rem 5rem rgba(0,0,0,.06);
 }
 
 * {
@@ -25,6 +29,12 @@ html {
   font-size: 62.5%;
 }
 
+@media only screen and (max-width: 48em) {
+  html {
+    font-size: 50%;
+  }
+}
+
 body {
   font-family: "lato", sans-serif;
   font-weight: 400;
@@ -32,21 +42,37 @@ body {
   color: var(--color-dark);
 }
 
-.header-container {
-  max-width: 120rem;
-  margin: 0 auto;
+.header {
+  background-image: -webkit-gradient(linear, left top, right top, from(rgba(249, 249, 249, 0.9))), url(../assets/images/pexels-pixabay-161154-min.jpg);
+  background-image: linear-gradient(to right, rgba(249, 249, 249, 0.9)), url(../assets/images/pexels-pixabay-161154-min.jpg);
+  background-size: cover;
+  background-position: center;
+  position: relative;
 }
 
-.header-container__logo-box {
-  display: none;
+.header-nav-container {
+  max-width: 120rem;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0rem 2rem;
+}
+
+.header-nav-container__logo-box {
   font-family: "cocogoose", sans-serif;
   font-weight: 900;
   font-size: 4rem;
-  margin: 2rem;
   color: var(--color-primary);
 }
 
-.header-container__logo-box span {
+.header-nav-container__logo-box span {
   background: -webkit-gradient(linear, left top, left bottom, from(var(--color-primary)), color-stop(var(--color-dark)), to(var(--color-grey)));
   background: linear-gradient(var(--color-primary), var(--color-dark), var(--color-grey));
   -webkit-background-clip: text;
@@ -54,10 +80,96 @@ body {
   font-size: 5rem;
 }
 
-.header-container__nav-bar--icon {
+.header-nav-container__nav-bar--icon {
   display: inline-block;
-  width: 5rem;
-  height: 5rem;
+  width: 3rem;
+  height: 3rem;
   fill: var(--color-dark-2);
   margin: 2rem 3rem;
+  cursor: pointer;
+}
+
+.header-nav-container__nav-bar--icon .icon-cross {
+  display: none;
+}
+
+.header-nav-container__nav-bar--link {
+  display: none;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+}
+
+.header-nav-container__nav-bar--link .nav-link {
+  text-decoration: none;
+  padding: 1rem 2rem;
+  list-style: none;
+  position: relative;
+}
+
+.header-nav-container__nav-bar--link .nav-link a {
+  text-decoration: none;
+  color: var(--color-dark);
+  font-size: 1.5rem;
+}
+
+.header-nav-container__nav-bar--link .nav-link::after {
+  content: '';
+  position: absolute;
+  width: 0px;
+  height: 1px;
+  bottom: 0;
+  background-color: var(--color-primary);
+  -webkit-transition: all ease-in-out .3s;
+  transition: all ease-in-out .3s;
+  left: 0;
+}
+
+.header-nav-container__nav-bar--link .nav-link:hover::after {
+  width: 100%;
+}
+
+@media only screen and (min-width: 48em) {
+  .header-nav {
+    -webkit-box-shadow: var(--shadow-dark);
+            box-shadow: var(--shadow-dark);
+    background-color: var(--color-white);
+  }
+  .header-nav-container__nav-bar--icon {
+    display: none;
+  }
+  .header-nav-container__nav-bar--link {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+.hide-icon {
+  display: none;
+}
+
+.nav-mobile {
+  display: none;
+  background-image: -webkit-gradient(linear, left top, right bottom, color-stop(70%, rgba(211, 211, 211, 0.8)), to(rgba(236, 83, 66, 0.808)));
+  background-image: linear-gradient(to right bottom, rgba(211, 211, 211, 0.8) 70%, rgba(236, 83, 66, 0.808));
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-top: 10rem;
+  width: 100vw;
+  position: fixed;
+  height: 100vh;
+  z-index: 10;
+  border-top: 2px solid var(--color-primary);
+  overflow: hidden;
+}
+
+.nav-mobile .nav-link a {
+  font-family: "cocogoose", sans-serif;
+  font-size: 2.5rem;
 }

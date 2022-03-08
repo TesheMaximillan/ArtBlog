@@ -1,0 +1,93 @@
+.header {
+  background-image: linear-gradient(to right, rgba(249, 249, 249, 0.9)), url(../assets/images/pexels-pixabay-161154-min.jpg);
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.header-nav-container {
+  @include maxContinerWidth;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0rem 2rem;
+
+  &__logo-box {
+    font-family: $display-font;
+    font-weight: 900;
+    font-size: 4rem;
+    color: var(--color-primary);
+
+    span {
+      background: linear-gradient(var(--color-primary), var(--color-dark), var(--color-grey));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-size: 5rem;
+    }
+  }
+
+  &__nav-bar {
+    &--icon {
+      display: inline-block;
+      width: 3rem;
+      height: 3rem;
+      fill: var(--color-dark-2);
+      margin: 2rem 3rem;
+      cursor: pointer;
+
+      .icon-cross {
+        display: none;
+      }
+    }
+
+    &--link {
+      display: none;
+      width: max-content;
+      .nav-link {
+        text-decoration: none;
+        padding: 1rem 2rem;
+        list-style: none;
+        position: relative;
+        a {
+          text-decoration: none;
+          color: var(--color-dark);
+          font-size: 1.5rem;
+        }
+
+        &::after {
+          content: '';
+          position: absolute;
+          width: 0px;
+          height: 1px;
+          bottom: 0;
+          background-color: var(--color-primary);
+          transition: all ease-in-out .3s;
+          left: 0;
+        }
+
+        &:hover::after {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: $bp-large) {
+  .header-nav {
+    box-shadow: var(--shadow-dark);
+    background-color: var(--color-white);
+  }
+  
+  .header-nav-container {
+    &__nav-bar {
+      &--icon {
+        display: none;
+      }
+
+      &--link {
+        display: flex;
+      }
+    }
+  }
+}

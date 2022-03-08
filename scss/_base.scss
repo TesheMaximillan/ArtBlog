@@ -6,9 +6,16 @@
   --color-dark: #272a31;
   --color-dark-2: #272a31cc;
   --color-grey: #d3d3d3;
+  --color-grey-light: #f9f9f9;
+  --color-white: #fff;
+
+  --shadow-dark: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px;
+  --shadow-light: 0 2rem 5rem rgba(0,0,0,.06);
+
 }
 
 $bp-large: 48em; // Default pixel size = 16px, 16px = 1em
+
 $display-font: 'cocogoose', sans-serif;
 $default-font: 'lato', sans-serif;
 
@@ -33,8 +40,8 @@ html {
   box-sizing: border-box;
   font-size: 62.5%; // 1rem = 10px, 10px/16px = 62.5%
 
-  @media only screen and (min-width: $bp-large) {
-      // font-size: 50%;
+  @media only screen and (max-width: $bp-large) {
+    font-size: 50%;
   }
 }
 
