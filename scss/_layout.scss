@@ -170,14 +170,13 @@
       display: flex;
       justify-content: center;
       flex-wrap: wrap;
-      max-width: 80%;
-      max-height: 18rem;
+      max-height: 25.5rem;
       overflow: hidden;
       transition: max-height .7s;
 
       &--card {
-        width: 16rem;
-        height: 18rem;
+        width: 23rem;
+        height: 25rem;
         display: flex;  
         position: relative;
         justify-content: center;  

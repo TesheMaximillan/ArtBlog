@@ -130,7 +130,7 @@ showMore.addEventListener('click', (event) => {
 
   if (artCardContainer.classList.contains('open')) {
     artCardContainer.classList.remove('open');
-    artCardContainer.style.maxHeight = '18rem';
+    artCardContainer.style.maxHeight = '25.5rem';
     showMore.textContent = 'Expand';
   } else {
     artCardContainer.classList.add('open');

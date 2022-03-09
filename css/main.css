@@ -313,16 +313,15 @@ body {
           justify-content: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  max-width: 80%;
-  max-height: 18rem;
+  max-height: 25.5rem;
   overflow: hidden;
   -webkit-transition: max-height .7s;
   transition: max-height .7s;
 }
 
 .main .main-container__art--card {
-  width: 16rem;
-  height: 18rem;
+  width: 23rem;
+  height: 25rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
