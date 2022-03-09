@@ -1,8 +1,8 @@
 const header = document.querySelector('.header');
 const headerBody = document.querySelector('.header-body');
 const hambergerIcon = document.querySelector('#hamberger');
-const iconMenu = document.querySelector('.icon-menu');
-const iconCross = document.querySelector('.icon-cross');
+const iconMenu = document.querySelector('#icon-menu');
+const iconCross = document.querySelector('#icon-cross');
 
 // //////////////////// Sticky NavBar
 const navbar = document.querySelector('.header-nav');
