@@ -21,7 +21,7 @@
 
 ## Screenshot
 
-![project screenshot](https://user-images.githubusercontent.com/51437483/157740364-10c232c0-f965-47e9-86fb-d2578c73b0b0.jpg)
+![project screenshot](https://user-images.githubusercontent.com/51437483/157740992-5c2e5ed6-4828-46ab-bdfc-e7f148842850.jpg)
 
 ## Author
 
