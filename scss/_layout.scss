@@ -47,10 +47,6 @@
 .header-nav-container {
   @include maxContinerWidth;
 
-  .logo-box {
-    display: none;
-  }
-
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -461,6 +457,7 @@
       width: 80%;
 
       .partner {
+        list-style: none;
         font-family: $display-font;
         color: var(--color-grey);
         font-size: 2rem;

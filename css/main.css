@@ -140,10 +140,6 @@ body {
   padding: 0 2rem;
 }
 
-.header-nav-container .logo-box {
-  display: none;
-}
-
 .header-nav-container__nav-bar {
   position: relative;
 }
@@ -733,6 +729,7 @@ body {
 }
 
 .footer__main--partners .partner {
+  list-style: none;
   font-family: "cocogoose", sans-serif;
   color: var(--color-grey);
   font-size: 2rem;
@@ -849,6 +846,7 @@ body {
 }
 
 .logo-box {
+  display: none;
   font-family: "cocogoose", sans-serif;
   font-weight: 900;
   font-size: 4rem;
