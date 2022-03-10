@@ -32,7 +32,7 @@
 
 /* stylelint-disable */
 .header {
-  background-image: linear-gradient(rgba(249, 249, 249, 0.9)), url(../assets/images/pexels-pixabay-161154-min.jpg);
+  background-image: linear-gradient(rgba(249, 249, 249, 0.9)), url('https://images.pexels.com/photos/161154/stained-glass-spiral-circle-pattern-161154.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500');
   background-size: cover;
   background-position: center;
   position: relative;
@@ -396,14 +396,14 @@
 
         .event-1 {
           margin: 0 3rem 3rem 3rem;
-          background-image: url(../assets/images/event1-min.jpg);
+          background-image: url(https://www.artculturemusic.com/wp-content/uploads/2020/07/art-gallery-monaco.jpg);
           position: relative;
 
           @include afterBackground;
         }
 
         .event-2 {
-          background-image: url(../assets/images/event2-min.jpg);
+          background-image: url(https://www.rereeti.org/wp-content/uploads/2015/06/nehru-centre-art-gallery.jpg);
           position: relative;
 
           @include afterBackground;
