@@ -19,7 +19,6 @@
   }
 }
 
-
 .hide-icon {
   display: none;
 }
@@ -62,7 +61,7 @@
   &:hover {
     background-color: var(--color-grey);
     color: var(--color-primary);
-    transition: all .2s;
+    transition: all 0.2s;
   }
 
   &:hover:active {
