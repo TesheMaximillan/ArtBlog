@@ -861,6 +861,13 @@ body {
   border: 2px solid var(--color-grey);
 }
 
+.logo-box--about__footer {
+  background: -webkit-gradient(linear, left top, left bottom, from(var(--color-primary)), to(var(--color-white)));
+  background: linear-gradient(var(--color-primary), var(--color-white));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 .hide-icon {
   display: none;
 }

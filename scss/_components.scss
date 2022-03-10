@@ -16,6 +16,12 @@
     margin-top: 5rem;
     padding: 3rem 10rem;
     border: 2px solid var(--color-grey);
+
+    &__footer {
+      background: linear-gradient(var(--color-primary), var(--color-white));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      }
   }
 }
 
