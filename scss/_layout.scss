@@ -103,13 +103,18 @@
   }
 }
 
+#header-body {
+  height: 100vh;
+  padding-left: 2rem;
+}
+
 .header-body {
   @include maxContinerWidth;
 
   padding: 2rem;
 
   &__greeting-text {
-    margin-top: 5rem;
+    margin-top: 8rem;
     color: var(--color-primary);
     font-weight: 600;
     font-size: 3.5rem;

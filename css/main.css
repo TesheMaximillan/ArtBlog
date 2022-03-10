@@ -226,6 +226,11 @@ body {
           transform: translateY(-2px);
 }
 
+#header-body {
+  height: 100vh;
+  padding-left: 2rem;
+}
+
 .header-body {
   max-width: 120rem;
   margin: 0 auto;
@@ -233,7 +238,7 @@ body {
 }
 
 .header-body__greeting-text {
-  margin-top: 5rem;
+  margin-top: 8rem;
   color: var(--color-primary);
   font-weight: 600;
   font-size: 3.5rem;

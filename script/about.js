@@ -28,19 +28,19 @@ const navItems = [
   },
   {
     name: 'Program',
-    href: '#',
+    href: '../pages/about.html',
   },
   {
     name: 'Join',
-    href: '../pages/about.js',
+    href: '../pages/about.html',
   },
   {
     name: 'Sponsor',
-    href: '#',
+    href: '../pages/about.html',
   },
   {
     name: 'News',
-    href: '#',
+    href: '../pages/about.html',
   },
 ];
 
