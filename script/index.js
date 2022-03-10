@@ -67,6 +67,7 @@ hambergerIcon.addEventListener('click', () => {
   } else {
     iconMenu.classList.add('hide-icon');
     iconCross.style.display = 'inline-block';
+    iconCross.style.fill = '#fff';
     ul.style.display = 'flex';
   }
 });

@@ -47,6 +47,10 @@
 .header-nav-container {
   @include maxContinerWidth;
 
+  .logo-box {
+    display: none;
+  }
+
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -61,7 +65,7 @@
       margin: 2rem 3rem;
       z-index: 200;
       top: 1rem;
-      right: 0;
+      left: 0;
       position: fixed;
 
       #icon-cross {
@@ -109,6 +113,7 @@
   padding: 2rem;
 
   &__greeting-text {
+    margin-top: 5rem;
     color: var(--color-primary);
     font-weight: 600;
     font-size: 3.5rem;
@@ -171,6 +176,7 @@
     align-items: center;
 
     .header-body__header-title {
+      margin-top: 5rem;
       font-size: 4rem;
     }
 
@@ -512,6 +518,10 @@
   }
 
   .header-nav-container {
+    .logo-box {
+      display: inline-block;
+    }
+
     &__nav-bar {
       display: flex;
 

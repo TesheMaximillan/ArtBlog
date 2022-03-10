@@ -140,6 +140,10 @@ body {
   padding: 0 2rem;
 }
 
+.header-nav-container .logo-box {
+  display: none;
+}
+
 .header-nav-container__nav-bar {
   position: relative;
 }
@@ -156,7 +160,7 @@ body {
   margin: 2rem 3rem;
   z-index: 200;
   top: 1rem;
-  right: 0;
+  left: 0;
   position: fixed;
 }
 
@@ -233,6 +237,7 @@ body {
 }
 
 .header-body__greeting-text {
+  margin-top: 5rem;
   color: var(--color-primary);
   font-weight: 600;
   font-size: 3.5rem;
@@ -303,6 +308,7 @@ body {
 }
 
 .header-body__about .header-body__header-title {
+  margin-top: 5rem;
   font-size: 4rem;
 }
 
@@ -792,6 +798,9 @@ body {
     -webkit-box-shadow: var(--shadow-dark);
             box-shadow: var(--shadow-dark);
     background-color: var(--color-white);
+  }
+  .header-nav-container .logo-box {
+    display: inline-block;
   }
   .header-nav-container__nav-bar {
     display: -webkit-box;
