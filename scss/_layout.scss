@@ -259,6 +259,11 @@
         @include title(var(--color-dark));
       }
 
+      .overflow {
+        height: 36.48rem;
+        overflow: hidden;
+      }
+
       &__main-artists {
         display: flex;
         flex-wrap: wrap;
@@ -267,11 +272,8 @@
         &--artist {
           display: flex;
           width: 100%;
+          height: 15.24rem;
           margin: 0 2rem 3rem 2rem;
-
-          &:last-child {
-            margin-bottom: 0;
-          }
 
           .artist-picture {
             width: 15rem;
@@ -281,6 +283,8 @@
           }
 
           .about-artist {
+            overflow: hidden;
+
             .artist-name {
               font-weight: 900;
               font-size: 1.8rem;
@@ -357,5 +361,14 @@
 
   #artist {
     width: calc((100% - 8rem)/2);
+  }
+
+  #overflow {
+    height: 100%;
+    overflow: none;
+  }
+
+  #speakers__button {
+    display: none;
   }
 }

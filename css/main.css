@@ -439,6 +439,11 @@ body {
   border-bottom: 1px solid var(--color-primary);
 }
 
+.main .featured-speakers .speakers .overflow {
+  height: 36.48rem;
+  overflow: hidden;
+}
+
 .main .featured-speakers .speakers__main-artists {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -455,11 +460,8 @@ body {
   display: -ms-flexbox;
   display: flex;
   width: 100%;
+  height: 15.24rem;
   margin: 0 2rem 3rem 2rem;
-}
-
-.main .featured-speakers .speakers__main-artists--artist:last-child {
-  margin-bottom: 0;
 }
 
 .main .featured-speakers .speakers__main-artists--artist .artist-picture {
@@ -467,6 +469,10 @@ body {
   margin-right: 2rem;
   border-radius: 3px;
   border: 2px solid var(--color-grey);
+}
+
+.main .featured-speakers .speakers__main-artists--artist .about-artist {
+  overflow: hidden;
 }
 
 .main .featured-speakers .speakers__main-artists--artist .about-artist .artist-name {
@@ -534,6 +540,13 @@ body {
   #artist {
     width: calc((100% - 8rem)/2);
   }
+  #overflow {
+    height: 100%;
+    overflow: none;
+  }
+  #speakers__button {
+    display: none;
+  }
 }
 
 .hide-icon {
@@ -564,4 +577,30 @@ body {
   font-family: "cocogoose", sans-serif;
   font-size: 2.5rem;
   color: var(--color-white);
+}
+
+#speakers__button {
+  width: 94%;
+  padding: 2rem;
+  border: 1px solid var(--color-grey);
+  border-radius: 2px;
+  text-align: center;
+  background-color: var(--color-grey-light);
+  font-weight: 600;
+  color: var(--color-dark-2);
+  font-size: 1.4rem;
+  cursor: pointer;
+}
+
+#speakers__button:hover {
+  background-color: var(--color-grey);
+  color: var(--color-primary);
+  -webkit-transition: all .2s;
+  transition: all .2s;
+}
+
+#speakers__button:hover:active {
+  -webkit-transform: translateY(2px);
+          transform: translateY(2px);
+  background-color: var(--color-white);
 }

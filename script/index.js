@@ -189,11 +189,15 @@ const featuredSpeakers = [
 const speakers = document.createElement('div');
 const speakersTitle = document.createElement('h2');
 const artists = document.createElement('div');
+const moreSpeaker = document.createElement('button');
 
 speakers.className = 'speakers';
 speakersTitle.className = 'speakers__main-title';
 speakersTitle.textContent = 'Featured Speakers';
-artists.className = 'speakers__main-artists';
+moreSpeaker.id = 'speakers__button';
+moreSpeaker.textContent = 'More';
+artists.classList.add('speakers__main-artists', 'overflow');
+artists.id = 'overflow';
 
 speakers.appendChild(speakersTitle);
 
@@ -231,4 +235,15 @@ for (let i = 0; i < featuredSpeakers.length; i += 1) {
 }
 
 speakers.appendChild(artists);
+speakers.appendChild(moreSpeaker);
 speakersContainer.appendChild(speakers);
+
+moreSpeaker.addEventListener('click', () => {
+  if (artists.classList.contains('overflow')) {
+    artists.classList.remove('overflow');
+    moreSpeaker.textContent = 'Collapse';
+  } else {
+    artists.classList.add('overflow');
+    moreSpeaker.textContent = 'Expand';
+  }
+});
