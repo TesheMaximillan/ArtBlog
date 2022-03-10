@@ -2,7 +2,7 @@
 
 # Art ~ Blog Capstone Project - 1
 
-> In this final project, I created an Art blog website that encourages artists to post their designs and also helps them to participate in different events especially related to the art gallery, and also gives them a chance to present their works at the event show. However, my main intention is to use HTML5/CSS and JavaScript best practices and apply these concepts which is I learned from the `Microverse Training - Module 1` to this amazing website.
+> In this capstone project, I created an Art blog website that encourages artists to post their designs and also helps them to participate in different events especially related to the art gallery, and also gives them a chance to present their works at the event show. However, my main intention is to use HTML5/CSS and JavaScript best practices and apply these concepts which is I learned from the `Microverse Training - Module 1` to this amazing website.
 
 
 ## Built With
@@ -15,7 +15,7 @@
 
 - CSS Preprocessor (SCSS)
 - JavaScript used for Dom Manipulation
-- JavaScript events is used
+- JavaScript events are used
 - JavaScript objects to store and access data
 - Semantic HTML Tag
 - CSS Box Model
