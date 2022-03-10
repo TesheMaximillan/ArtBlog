@@ -1,3 +1,25 @@
+.logo-box {
+  font-family: $display-font;
+  font-weight: 900;
+  font-size: 4rem;
+  color: var(--color-primary);
+  text-decoration: none;
+
+  span {
+    background: linear-gradient(var(--color-primary), var(--color-dark), var(--color-grey));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 5rem;
+  }
+
+  &--about {
+    margin-top: 5rem;
+    padding: 3rem 10rem;
+    border: 2px solid var(--color-grey);
+  }
+}
+
+
 .hide-icon {
   display: none;
 }

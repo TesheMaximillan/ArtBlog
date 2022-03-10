@@ -24,12 +24,34 @@ window.onscroll = () => {
 // /////////////////// Mobile Menu
 const ul = document.createElement('ul');
 ul.classList.add('header-nav-container__nav-bar--link', 'nav-mobile');
-const navItems = ['About', 'Program', 'Join', 'Sponsor', 'News'];
+const navItems = [
+  {
+    name: 'About',
+    href: '../pages/about.html',
+  },
+  {
+    name: 'Program',
+    href: '#',
+  },
+  {
+    name: 'Join',
+    href: '../pages/about.js',
+  },
+  {
+    name: 'Sponsor',
+    href: '#',
+  },
+  {
+    name: 'News',
+    href: '#',
+  },
+];
 
 for (let i = 0; i < navItems.length; i += 1) {
   const li = document.createElement('li');
   const a = document.createElement('a');
-  a.textContent = navItems[i];
+  a.textContent = navItems[i].name;
+  a.href = navItems[i].href;
   li.className = 'nav-link';
   li.appendChild(a);
   ul.appendChild(li);
