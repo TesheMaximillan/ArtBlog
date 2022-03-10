@@ -19,6 +19,10 @@
 
 [Live Demo Link](https://teshemaximillan.github.io/Portfolio/)
 
+## Screenshot
+
+![project screenshot](https://user-images.githubusercontent.com/51437483/157740364-10c232c0-f965-47e9-86fb-d2578c73b0b0.jpg)
+
 ## Author
 
 👤 **Teshome Kurabachew**
