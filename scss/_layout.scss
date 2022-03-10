@@ -492,7 +492,7 @@
     }
 
     &--about {
-      background-color: var(--color-dark);
+      background-color: var(--color-grey-light);
     }
   }
 }
@@ -551,5 +551,14 @@
 
   #speakers__button {
     display: none;
+  }
+
+  .footer__main--about {
+    display: none;
+  }
+
+  .footer__end--about {
+    background-color: var(--color-dark);
+    color: var(--color-white);
   }
 }
