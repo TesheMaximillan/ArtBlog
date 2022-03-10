@@ -30,11 +30,7 @@
 
 ## Live Demo
 
-[Live Demo Link](https://teshemaximillan.github.io/Portfolio/)
-
-## Video Link
-
-[Loom Demo video Link](https://teshemaximillan.github.io/Portfolio/)
+[Live Demo Link](https://teshemaximillan.github.io/ArtBlog/)
 
 ## Author
 
