@@ -107,6 +107,7 @@ body {
   background-size: cover;
   background-position: center;
   position: relative;
+  z-index: 30;
 }
 
 .header-nav-container {
@@ -275,11 +276,11 @@ body {
   font-size: 1.8rem;
 }
 
-.main {
+.main .main-art {
   background-color: var(--color-dark);
 }
 
-.main .main-container {
+.main .main-art .main-container {
   max-width: 120rem;
   margin: 0 auto;
   display: -webkit-box;
@@ -295,7 +296,7 @@ body {
   padding: 5rem 0;
 }
 
-.main .main-container__main-title {
+.main .main-art .main-container__main-title {
   display: inline-block;
   margin-bottom: 5rem;
   text-align: center;
@@ -304,7 +305,7 @@ body {
   border-bottom: 1px solid var(--color-primary);
 }
 
-.main .main-container__art {
+.main .main-art .main-container__art {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -319,7 +320,7 @@ body {
   transition: max-height .7s;
 }
 
-.main .main-container__art--card {
+.main .main-art .main-container__art--card {
   width: 23rem;
   height: 25rem;
   display: -webkit-box;
@@ -335,7 +336,7 @@ body {
   transition: all .2s;
 }
 
-.main .main-container__art--card::after {
+.main .main-art .main-container__art--card::after {
   content: '';
   position: absolute;
   width: 0;
@@ -359,27 +360,28 @@ body {
   font-size: 2rem;
 }
 
-.main .main-container__art--card:hover::after {
+.main .main-art .main-container__art--card:hover::after {
   content: 'Art Details';
   width: 100%;
   height: 100%;
 }
 
-.main .main-container__art--card:hover:active {
+.main .main-art .main-container__art--card:hover:active {
   -webkit-transform: translateY(2px);
           transform: translateY(2px);
 }
 
-.main .main-container__art--card .card-img {
+.main .main-art .main-container__art--card .card-img {
   width: 100%;
   height: 100%;
   background-position: cover;
   border-radius: 2px;
 }
 
-.main .main-container__art--card .card-desc {
+.main .main-art .main-container__art--card .card-desc {
   width: 100%;
   position: absolute;
+  padding: .5rem;
   -ms-flex-item-align: end;
       align-self: flex-end;
   text-align: center;
@@ -389,23 +391,107 @@ body {
   color: var(--color-white);
 }
 
-.main .main-container__art--card .card-desc__author {
+.main .main-art .main-container__art--card .card-desc__artist {
   font-weight: 900;
   font-size: 1.4rem;
   line-height: 1.6;
 }
 
-.main .main-container__art--card .card-desc__site {
+.main .main-art .main-container__art--card .card-desc__site {
   font-weight: 600;
   font-size: 1rem;
 }
 
-.main .main-container__detail {
+.main .main-art .main-container__detail {
   margin-top: 5rem;
   color: var(--color-grey-light);
   text-transform: uppercase;
   font-weight: 600;
   font-size: 1.4rem;
+}
+
+.main .featured-speakers {
+  background-color: var(--color-grey-light);
+}
+
+.main .featured-speakers .speakers {
+  max-width: 120rem;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 5rem 0;
+}
+
+.main .featured-speakers .speakers__main-title {
+  display: inline-block;
+  margin-bottom: 5rem;
+  text-align: center;
+  color: var(--color-dark);
+  font-size: 2.5rem;
+  border-bottom: 1px solid var(--color-primary);
+}
+
+.main .featured-speakers .speakers__main-artists {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.main .featured-speakers .speakers__main-artists--artist {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  margin: 0 2rem 3rem 2rem;
+}
+
+.main .featured-speakers .speakers__main-artists--artist:last-child {
+  margin-bottom: 0;
+}
+
+.main .featured-speakers .speakers__main-artists--artist .artist-picture {
+  width: 15rem;
+  margin-right: 2rem;
+  border-radius: 3px;
+  border: 2px solid var(--color-grey);
+}
+
+.main .featured-speakers .speakers__main-artists--artist .about-artist .artist-name {
+  font-weight: 900;
+  font-size: 1.8rem;
+  line-height: 1.6;
+}
+
+.main .featured-speakers .speakers__main-artists--artist .about-artist .artist-title {
+  font-weight: 600;
+  font-size: 1.4rem;
+  line-height: 1.8;
+  color: var(--color-primary);
+  font-style: italic;
+}
+
+.main .featured-speakers .speakers__main-artists--artist .about-artist .line {
+  border: 0.5px solid var(--color-grey);
+  width: 10%;
+  margin: 1rem 0;
+}
+
+.main .featured-speakers .speakers__main-artists--artist .about-artist .artist-desc {
+  font-weight: 500;
+  font-size: 1.2rem;
 }
 
 @media only screen and (min-width: 48em) {
@@ -444,6 +530,9 @@ body {
   .header-body {
     padding: 8rem 0;
     height: calc(100vh - 12.48rem);
+  }
+  #artist {
+    width: calc((100% - 8rem)/2);
   }
 }
 

@@ -26,6 +26,7 @@
   background-size: cover;
   background-position: center;
   position: relative;
+  z-index: 30;
 }
 
 .header-nav-container {
@@ -52,6 +53,7 @@
 
   &__nav-bar {
     position: relative;
+
     &--icon {
       @include icon(var(--color-dark-2), 3rem);
       margin: 2rem 3rem;
@@ -149,104 +151,163 @@
 }
 
 .main {
-  background-color: var(--color-dark);
-  .main-container {
-    @include maxContinerWidth;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 5rem 0;
+  .main-art {
+    background-color: var(--color-dark);
 
-    &__main-title {
-      display: inline-block;
-      margin-bottom: 5rem;
-      text-align: center;
-      color: var(--color-white);
-      font-size: 2.5rem;
-      border-bottom: 1px solid var(--color-primary);
-    }
+    .main-container {
+      @include maxContinerWidth;
+      @include initializeContainer;
 
-    &__art {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      max-height: 25.5rem;
-      overflow: hidden;
-      transition: max-height .7s;
+      &__main-title {
+        @include title(var(--color-white));
+      }
 
-      &--card {
-        width: 23rem;
-        height: 25rem;
-        display: flex;  
-        position: relative;
-        justify-content: center;  
-        margin: .25rem;  
-        cursor: pointer; 
-        transition: all .2s;
+      &__art {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        max-height: 25.5rem;
+        overflow: hidden;
+        transition: max-height .7s;
 
-        &::after {
-          content: '';
-          position: absolute;
-          width: 0;
-          height: 0;
-          top: 0;
-          background-image: var(--linear-gradient);
-          transition: all ease-in-out 0.3s;
+        &--card {
+          width: 23rem;
+          height: 25rem;
           display: flex;
+          position: relative;
           justify-content: center;
-          text-decoration: underline;
-          align-items: center;
-          color: var(--color-white);
-          font-family: $display-font;
-          font-size: 2rem;
-        }
-     
-        &:hover::after {
-          content: 'Art Details';
-          width: 100%;
-          height: 100%;
-        }
+          margin: .25rem;
+          cursor: pointer;
+          transition: all .2s;
 
-        &:hover:active {
-          transform: translateY(2px);
-        }
-
-        .card-img {
-          width: 100%;
-          height: 100%;
-          background-position: cover;
-          border-radius: 2px;
-        }
-
-        .card-desc {
-          width: 100%;
-          position: absolute;
-          align-self: flex-end;
-          text-align: center;
-          box-shadow: var(--shadow-card);
-          background-image: var(--linear-gradient);
-          color: var(--color-white);
-
-          &__author {
-            font-weight: 900;
-            font-size: 1.4rem;
-            line-height: 1.6;
+          &::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 0;
+            top: 0;
+            background-image: var(--linear-gradient);
+            transition: all ease-in-out 0.3s;
+            display: flex;
+            justify-content: center;
+            text-decoration: underline;
+            align-items: center;
+            color: var(--color-white);
+            font-family: $display-font;
+            font-size: 2rem;
           }
 
-          &__site {
-            font-weight: 600;
-            font-size: 1rem;
+          &:hover::after {
+            content: 'Art Details';
+            width: 100%;
+            height: 100%;
+          }
+
+          &:hover:active {
+            transform: translateY(2px);
+          }
+
+          .card-img {
+            width: 100%;
+            height: 100%;
+            background-position: cover;
+            border-radius: 2px;
+          }
+
+          .card-desc {
+            width: 100%;
+            position: absolute;
+            padding: .5rem;
+            align-self: flex-end;
+            text-align: center;
+            box-shadow: var(--shadow-card);
+            background-image: var(--linear-gradient);
+            color: var(--color-white);
+
+            &__artist {
+              font-weight: 900;
+              font-size: 1.4rem;
+              line-height: 1.6;
+            }
+
+            &__site {
+              font-weight: 600;
+              font-size: 1rem;
+            }
           }
         }
       }
-    }
 
-    &__detail {
-      margin-top: 5rem;
-      color: var(--color-grey-light);
-      text-transform: uppercase;
-      font-weight: 600;
-      font-size: 1.4rem;
+      &__detail {
+        margin-top: 5rem;
+        color: var(--color-grey-light);
+        text-transform: uppercase;
+        font-weight: 600;
+        font-size: 1.4rem;
+      }
+    }
+  }
+
+  .featured-speakers {
+    background-color: var(--color-grey-light);
+
+    .speakers {
+      @include maxContinerWidth;
+      @include initializeContainer;
+
+      &__main-title {
+        @include title(var(--color-dark));
+      }
+
+      &__main-artists {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        &--artist {
+          display: flex;
+          width: 100%;
+          margin: 0 2rem 3rem 2rem;
+
+          &:last-child {
+            margin-bottom: 0;
+          }
+
+          .artist-picture {
+            width: 15rem;
+            margin-right: 2rem;
+            border-radius: 3px;
+            border: 2px solid var(--color-grey);
+          }
+
+          .about-artist {
+            .artist-name {
+              font-weight: 900;
+              font-size: 1.8rem;
+              line-height: 1.6;
+            }
+
+            .artist-title {
+              font-weight: 600;
+              font-size: 1.4rem;
+              line-height: 1.8;
+              color: var(--color-primary);
+              font-style: italic;
+            }
+
+            .line {
+              border: .5px solid var(--color-grey);
+              width: 10%;
+              margin: 1rem 0;
+            }
+
+            .artist-desc {
+              font-weight: 500;
+              font-size: 1.2rem;
+            }
+          }
+        }
+      }
     }
   }
 }
@@ -292,5 +353,9 @@
   .header-body {
     padding: 8rem 0;
     height: calc(100vh - 12.48rem);
+  }
+
+  #artist {
+    width: calc((100% - 8rem)/2);
   }
 }
