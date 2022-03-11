@@ -27,23 +27,23 @@ ul.classList.add('header-nav-container__nav-bar--link', 'nav-mobile');
 const navItems = [
   {
     name: 'About',
-    href: 'ArtBlog/pages/about.html',
+    href: 'pages/about.html',
   },
   {
     name: 'Program',
-    href: 'ArtBlog/pages/about.html',
+    href: 'pages/about.html',
   },
   {
     name: 'Join',
-    href: 'ArtBlog/pages/about.html',
+    href: 'pages/about.html',
   },
   {
     name: 'Sponsor',
-    href: 'ArtBlog/pages/about.html',
+    href: 'pages/about.html',
   },
   {
     name: 'News',
-    href: 'ArtBlog/pages/about.html',
+    href: 'pages/about.html',
   },
 ];
 
