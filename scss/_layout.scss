@@ -1,0 +1,589 @@
+.navigation {
+  display: none;
+  background-color: var(--color-dark);
+
+  &__top-nav {
+    @include maxContinerWidth;
+
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  ul {
+    display: flex;
+
+    .nav-item {
+      @include link(var(--color-white));
+
+      &__icon {
+        @include icon(var(--color-white), 2rem);
+
+        &:hover {
+          fill: var(--color-primary);
+        }
+      }
+
+      a:hover {
+        color: var(--color-primary);
+      }
+    }
+  }
+}
+
+/* stylelint-disable */
+.header {
+  background-image: linear-gradient(rgba(249, 249, 249, 0.9)), url('https://images.pexels.com/photos/161154/stained-glass-spiral-circle-pattern-161154.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500');
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  z-index: 30;
+
+  &__about {
+    background-image: linear-gradient(to right, rgba(249, 249, 249, 0.9));
+  }
+}
+
+/* stylelint-enable */
+
+.header-nav-container {
+  @include maxContinerWidth;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2rem;
+
+  &__nav-bar {
+    position: relative;
+
+    &--icon {
+      @include icon(var(--color-dark-2), 3rem);
+
+      margin: 2rem 3rem;
+      z-index: 200;
+      top: 1rem;
+      left: 0;
+      position: fixed;
+
+      #icon-cross {
+        display: none;
+      }
+    }
+
+    &--link {
+      display: none;
+      width: max-content;
+
+      .nav-link {
+        @include link(var(--color-dark));
+      }
+    }
+
+    .your-blog {
+      display: none;
+      padding: 0 2rem;
+      border: 5px solid var(--color-primary);
+      margin-left: 5rem;
+      background-color: var(--color-white);
+      color: #d52815;
+      font-weight: 600;
+      font-size: 1.6rem;
+      cursor: pointer;
+      transition: all 0.2s;
+
+      &:hover {
+        background-color: var(--color-primary);
+        color: var(--color-white);
+        transform: translateY(0);
+      }
+
+      &:active {
+        transform: translateY(-2px);
+      }
+    }
+  }
+}
+
+#header-body {
+  height: 100vh;
+  padding-left: 2rem;
+}
+
+.header-body {
+  @include maxContinerWidth;
+
+  padding: 2rem;
+
+  &__greeting-text {
+    margin-top: 8rem;
+    color: var(--color-primary);
+    font-weight: 600;
+    font-size: 3.5rem;
+    text-align: center;
+    line-height: 1.6;
+  }
+
+  &__header-title {
+    background: url(../assets/images/pexels-pixabay-73873-min.jpg);
+    background-size: cover;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-transform: uppercase;
+    font-family: $display-font;
+    color: var(--color-primary);
+    font-weight: 600;
+    font-size: 5rem;
+    line-height: 1.2;
+    margin-bottom: 2rem;
+    text-align: center;
+
+    span {
+      display: block;
+    }
+  }
+
+  &__header-desc {
+    border: 2px solid var(--color-white);
+    padding: 2rem;
+    max-width: 48rem;
+    font-size: 1.6rem;
+    font-weight: 500;
+    text-align: center;
+  }
+
+  &__event-time {
+    margin-top: 2rem;
+    font-family: $display-font;
+    font-size: 3rem;
+    color: var(--color-dark-2);
+    text-align: center;
+
+    &--about {
+      font-family: $default-font;
+      font-size: 1.6rem;
+    }
+  }
+
+  &__event-place {
+    font-size: 1.8rem;
+    text-align: center;
+
+    &--about {
+      text-decoration: none;
+      color: var(--color-dark);
+      font-size: 1.8rem;
+      font-weight: 600;
+    }
+  }
+
+  &__about {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .header-body__header-title {
+      margin-top: 5rem;
+      font-size: 4rem;
+    }
+
+    .header-body__header-desc {
+      text-align: center;
+      max-width: 80rem;
+      color: var(--color-dark-2);
+      background-color: var(--color-white);
+      border: 1px solid var(--color-grey);
+      margin: 3rem 0;
+      padding: 2rem;
+    }
+  }
+}
+
+.main {
+  .main-art {
+    background-color: var(--color-dark);
+
+    .main-container {
+      @include maxContinerWidth;
+      @include initializeContainer;
+
+      &__main-title {
+        @include title(var(--color-white));
+      }
+
+      &__art {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        max-height: 25.5rem;
+        overflow: hidden;
+        transition: max-height 0.7s;
+
+        &--card {
+          width: 23rem;
+          height: 25rem;
+          display: flex;
+          position: relative;
+          justify-content: center;
+          margin: 0.25rem;
+          cursor: pointer;
+          transition: all 0.2s;
+
+          &::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 0;
+            top: 0;
+            background-image: var(--linear-gradient);
+            transition: all ease-in-out 0.3s;
+            display: flex;
+            justify-content: center;
+            text-decoration: underline;
+            align-items: center;
+            color: var(--color-white);
+            font-family: $display-font;
+            font-size: 2rem;
+          }
+
+          &:hover::after {
+            content: 'Art Details';
+            width: 100%;
+            height: 100%;
+          }
+
+          &:hover:active {
+            transform: translateY(2px);
+          }
+
+          .card-img {
+            width: 100%;
+            height: 100%;
+            border-radius: 2px;
+          }
+
+          .card-desc {
+            width: 100%;
+            position: absolute;
+            padding: 0.5rem;
+            align-self: flex-end;
+            text-align: center;
+            box-shadow: var(--shadow-card);
+            background-image: var(--linear-gradient);
+            color: var(--color-white);
+
+            &__artist {
+              font-weight: 900;
+              font-size: 1.4rem;
+              line-height: 1.6;
+            }
+
+            &__site {
+              font-weight: 600;
+              font-size: 1rem;
+            }
+          }
+        }
+      }
+
+      &__detail {
+        margin-top: 5rem;
+        color: var(--color-grey-light);
+        text-transform: uppercase;
+        font-weight: 600;
+        font-size: 1.4rem;
+      }
+    }
+  }
+
+  .featured-speakers {
+    background-color: var(--color-grey-light);
+
+    .speakers {
+      @include maxContinerWidth;
+      @include initializeContainer;
+
+      &__main-title {
+        @include title(var(--color-dark));
+      }
+
+      .overflow {
+        height: 36.48rem;
+        overflow: hidden;
+      }
+
+      &__main-artists {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        &--artist {
+          display: flex;
+          width: 100%;
+          height: 15.24rem;
+          margin: 0 2rem 3rem 2rem;
+
+          .artist-picture {
+            width: 15rem;
+            margin-right: 2rem;
+            border-radius: 3px;
+            border: 2px solid var(--color-grey);
+          }
+
+          .about-artist {
+            overflow: hidden;
+
+            .artist-name {
+              font-weight: 900;
+              font-size: 1.8rem;
+              line-height: 1.6;
+            }
+
+            .artist-title {
+              font-weight: 600;
+              font-size: 1.4rem;
+              line-height: 1.8;
+              color: var(--color-primary);
+              font-style: italic;
+            }
+
+            .line {
+              border: 0.5px solid var(--color-grey);
+              width: 10%;
+              margin: 1rem 0;
+            }
+
+            .artist-desc {
+              font-weight: 500;
+              font-size: 1.2rem;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .featured-logo {
+    background-color: var(--color-white);
+
+    &__content {
+      @include maxContinerWidth;
+      @include initializeContainer;
+
+      .content-title {
+        @include title(var(--color-dark));
+      }
+
+      .content-desc {
+        max-width: 68rem;
+        text-align: center;
+        font-size: 1.4rem;
+        color: var(--color-dark-2);
+      }
+    }
+  }
+
+  .events__main--about {
+    background-color: var(--color-grey-light);
+
+    .events__main--title {
+      @include title(var(--color-dark));
+    }
+
+    .events__main--content {
+      @include maxContinerWidth;
+      @include initializeContainer;
+
+      .events__main--desc {
+        max-width: 68rem;
+        text-align: center;
+        font-size: 1.4rem;
+        color: var(--color-dark-2);
+      }
+
+      .events__main--events {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin-top: 3rem;
+
+        .event-1 {
+          margin: 0 3rem 3rem 3rem;
+          background-image: url(https://www.artculturemusic.com/wp-content/uploads/2020/07/art-gallery-monaco.jpg);
+          position: relative;
+
+          @include afterBackground;
+        }
+
+        .event-2 {
+          background-image: url(https://www.rereeti.org/wp-content/uploads/2015/06/nehru-centre-art-gallery.jpg);
+          position: relative;
+
+          @include afterBackground;
+        }
+
+        .event {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          color: var(--color-white);
+          width: 30rem;
+          height: 20rem;
+          background-size: cover;
+        }
+
+        .event-date {
+          font-weight: 600;
+          font-size: 2.4rem;
+          z-index: 10;
+        }
+
+        .event-type {
+          font-size: 1.2rem;
+          z-index: 10;
+        }
+      }
+    }
+  }
+}
+
+.footer {
+  &__main {
+    background-color: var(--color-dark);
+
+    &--content {
+      @include maxContinerWidth;
+      @include initializeContainer;
+    }
+
+    &--title {
+      @include title(var(--color-white));
+    }
+
+    &--partners {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-evenly;
+      width: 80%;
+
+      .partner {
+        list-style: none;
+        font-family: $display-font;
+        color: var(--color-grey);
+        font-size: 2rem;
+        margin-right: 3rem;
+      }
+    }
+  }
+
+  &__end {
+    background-color: var(--color-grey-light);
+
+    &--content {
+      @include maxContinerWidth;
+      @include initializeContainer;
+
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+
+      .logo-box {
+        margin: 0 6rem 0 2rem;
+      }
+    }
+
+    &--desc {
+      min-width: 35rem;
+      max-width: 70rem;
+      margin: 0 2rem;
+
+      .copy-right {
+        font-weight: 600;
+        font-size: 1.2rem;
+        margin-bottom: 1rem;
+      }
+
+      .copy-desc {
+        font-size: 1.2rem;
+      }
+    }
+
+    &--about {
+      background-color: var(--color-grey-light);
+    }
+  }
+}
+
+@media only screen and (min-width: $bp-large) {
+  .navigation {
+    display: block;
+  }
+
+  .header-nav {
+    box-shadow: var(--shadow-dark);
+    background-color: var(--color-white);
+  }
+
+  .header-nav-container {
+    .logo-box {
+      display: inline-block;
+    }
+
+    &__nav-bar {
+      display: flex;
+
+      &--icon {
+        display: none;
+      }
+
+      &--link {
+        display: flex;
+      }
+    }
+
+    .your-blog {
+      display: inline-block;
+    }
+  }
+
+  .sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
+
+  .content {
+    padding-top: 8rem;
+  }
+
+  .header-body {
+    padding: 8rem 0;
+    height: calc(100vh - 12.48rem);
+
+    &__greeting-text,
+    &__header-title,
+    &__header-desc,
+    &__event-time,
+    &__event-place {
+      text-align: left;
+    }
+  }
+
+  #artist {
+    width: calc((100% - 8rem) / 2);
+  }
+
+  #overflow {
+    height: 100%;
+  }
+
+  #speakers__button,
+  .footer__main--about {
+    display: none;
+  }
+
+  .footer__end--about {
+    background-color: var(--color-dark);
+    color: var(--color-white);
+  }
+}

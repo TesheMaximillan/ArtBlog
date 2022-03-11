@@ -1,0 +1,119 @@
+@import url('http://fonts.cdnfonts.com/css/cocogoose');
+@import url('http://fonts.cdnfonts.com/css/lato');
+
+:root {
+  --color-primary: #ec5242;
+  --color-primary-light: rgba(236, 83, 66, 0.9);
+  --color-dark: #272a31;
+  --color-dark-2: #272a31cc;
+  --color-grey: #d3d3d3;
+  --color-grey-light: #f9f9f9;
+  --color-white: #fff;
+  --linear-gradient: linear-gradient(to right bottom, rgba(34, 34, 34, 0.9), rgba(236, 83, 66, 0.808));
+  --shadow-dark: rgba(0, 0, 0, 0.1) 0 10px 15px -3px;
+  --shadow-card: rgba(211, 211, 211, 0.2) 0 3px 8px;
+  --shadow-light: 0 2rem 5rem rgba(0, 0, 0, 0.06);
+}
+
+$bp-large: 48em; // Default pixel size = 16px, 16px = 1em
+
+$display-font: 'cocogoose', sans-serif;
+$default-font: 'lato', sans-serif;
+
+@mixin maxContinerWidth {
+  max-width: 120rem;
+  margin: 0 auto;
+}
+
+@mixin initializeContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 5rem 0;
+}
+
+@mixin title($color) {
+  display: inline-block;
+  margin-bottom: 5rem;
+  text-align: center;
+  color: $color;
+  font-size: 2.5rem;
+  border-bottom: 1px solid var(--color-primary);
+}
+
+@mixin link ($color) {
+  text-decoration: none;
+  padding: 1rem 2rem;
+  list-style: none;
+  position: relative;
+
+  a {
+    text-decoration: none;
+    color: $color;
+    font-size: 1.5rem;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 1px;
+    bottom: 0;
+    background-color: var(--color-primary);
+    transition: all ease-in-out 0.3s;
+    left: 0;
+  }
+
+  &:hover::after {
+    width: 100%;
+  }
+}
+
+@mixin icon($color, $s) {
+  display: inline-block;
+  align-self: center;
+  width: $s;
+  height: $s;
+  fill: $color;
+  cursor: pointer;
+}
+
+@mixin afterBackground {
+  &::after {
+    content: '';
+    position: absolute;
+    background-color: rgba(223, 22, 0, 0.575);
+    width: 100%;
+    height: 100%;
+    left: 0;
+    bottom: 0;
+  }
+}
+
+// ///////////////////////////// Global Reset
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; // 1rem = 10px, 10px/16px = 62.5%
+
+  @media only screen and (max-width: $bp-large) {
+    // font-size: 50%;
+  }
+}
+
+body {
+  font-family: "lato", sans-serif;
+  font-weight: 400;
+  line-height: 1.6;
+  color: var(--color-dark);
+}
