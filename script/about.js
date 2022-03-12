@@ -24,7 +24,7 @@ ul.classList.add('header-nav-container__nav-bar--link', 'nav-mobile');
 const navItems = [
   {
     name: 'Home',
-    href: '/',
+    href: '/index.html',
   },
   {
     name: 'About',
@@ -53,7 +53,7 @@ for (let i = 0; i < navItems.length; i += 1) {
   const a = document.createElement('a');
   a.textContent = navItems[i].name;
   a.addEventListener('click', () => {
-    window.location.replace(navItems[i].href);
+    window.location.href = navItems[i].href;
   });
   li.className = 'nav-link';
   li.appendChild(a);

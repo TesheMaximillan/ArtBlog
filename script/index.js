@@ -31,7 +31,7 @@ const navItems = [
   },
   {
     name: 'About',
-    href: './pages/about.html',
+    href: 'pages/about.html',
   },
   {
     name: 'Program',
