@@ -24,27 +24,27 @@ ul.classList.add('header-nav-container__nav-bar--link', 'nav-mobile');
 const navItems = [
   {
     name: 'Home',
-    href: '../index.html',
+    href: '/',
   },
   {
     name: 'About',
-    href: './about.html',
+    href: '#',
   },
   {
     name: 'Program',
-    href: './about.html',
+    href: '#',
   },
   {
     name: 'Join',
-    href: './about.html',
+    href: '#',
   },
   {
     name: 'Sponsor',
-    href: './about.html',
+    href: '#',
   },
   {
     name: 'News',
-    href: './about.html',
+    href: '#',
   },
 ];
 
