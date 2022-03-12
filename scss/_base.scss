@@ -1,12 +1,4 @@
-@font-face {
-  font-family: 'cocogoose';
-  src: url(../assets/fonts/Cocogoose\ Pro-trial.ttf);
-}
-
-@font-face {
-  font-family: 'lato';
-  src: url(../assets/fonts/Lato-Regular.ttf);
-}
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&family=Rye&display=swap');
 
 :root {
   --color-primary: #ec5242;
@@ -24,7 +16,7 @@
 
 $bp-large: 48em; // Default pixel size = 16px, 16px = 1em
 
-$display-font: 'cocogoose', sans-serif;
+$display-font: 'Rye', cursive;
 $default-font: 'lato', sans-serif;
 
 @mixin maxContinerWidth {

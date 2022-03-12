@@ -1,5 +1,4 @@
-@import url("http://fonts.cdnfonts.com/css/cocogoose");
-@import url("http://fonts.cdnfonts.com/css/lato");
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&family=Rye&display=swap");
 :root {
   --color-primary: #ec5242;
   --color-primary-light: rgba(236, 83, 66, 0.9);
@@ -151,10 +150,10 @@ body {
       align-self: center;
   width: 3rem;
   height: 3rem;
-  fill: var(--color-dark-2);
+  fill: var(--color-primary);
   cursor: pointer;
   margin: 2rem 3rem;
-  z-index: 200;
+  z-index: 1000;
   top: 1rem;
   left: 0;
   position: fixed;
@@ -227,7 +226,6 @@ body {
 }
 
 #header-body {
-  height: 100vh;
   padding-left: 2rem;
 }
 
@@ -252,7 +250,7 @@ body {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   text-transform: uppercase;
-  font-family: "cocogoose", sans-serif;
+  font-family: "Rye", cursive;
   color: var(--color-primary);
   font-weight: 600;
   font-size: 5rem;
@@ -276,7 +274,7 @@ body {
 
 .header-body__event-time {
   margin-top: 2rem;
-  font-family: "cocogoose", sans-serif;
+  font-family: "Rye", cursive;
   font-size: 3rem;
   color: var(--color-dark-2);
   text-align: center;
@@ -407,7 +405,7 @@ body {
       -ms-flex-align: center;
           align-items: center;
   color: var(--color-white);
-  font-family: "cocogoose", sans-serif;
+  font-family: "Rye", cursive;
   font-size: 2rem;
 }
 
@@ -739,7 +737,7 @@ body {
 
 .footer__main--partners .partner {
   list-style: none;
-  font-family: "cocogoose", sans-serif;
+  font-family: "Rye", cursive;
   color: var(--color-grey);
   font-size: 2rem;
   margin-right: 3rem;
@@ -845,6 +843,9 @@ body {
   #overflow {
     height: 100%;
   }
+  .footer__end--content .logo-box {
+    display: inline-block;
+  }
   #speakers__button,
   .footer__main--about {
     display: none;
@@ -857,7 +858,7 @@ body {
 
 .logo-box {
   display: none;
-  font-family: "cocogoose", sans-serif;
+  font-family: "Rye", cursive;
   font-weight: 900;
   font-size: 4rem;
   color: var(--color-primary);
@@ -911,7 +912,7 @@ body {
 }
 
 .nav-mobile .nav-link a {
-  font-family: "cocogoose", sans-serif;
+  font-family: "Rye", cursive;
   font-size: 2.5rem;
   color: var(--color-white);
 }

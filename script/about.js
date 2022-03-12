@@ -23,24 +23,28 @@ const ul = document.createElement('ul');
 ul.classList.add('header-nav-container__nav-bar--link', 'nav-mobile');
 const navItems = [
   {
+    name: 'Home',
+    href: 'index.html',
+  },
+  {
     name: 'About',
-    href: 'about.html',
+    href: 'pages/about.html',
   },
   {
     name: 'Program',
-    href: 'about.html',
+    href: 'pages/about.html',
   },
   {
     name: 'Join',
-    href: 'about.html',
+    href: 'pages/about.html',
   },
   {
     name: 'Sponsor',
-    href: 'about.html',
+    href: 'pages/about.html',
   },
   {
     name: 'News',
-    href: 'about.html',
+    href: 'pages/about.html',
   },
 ];
 
