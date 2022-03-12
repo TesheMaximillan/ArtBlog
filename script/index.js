@@ -26,6 +26,10 @@ const ul = document.createElement('ul');
 ul.classList.add('header-nav-container__nav-bar--link', 'nav-mobile');
 const navItems = [
   {
+    name: 'Home',
+    href: 'index.html',
+  },
+  {
     name: 'About',
     href: 'pages/about.html',
   },
