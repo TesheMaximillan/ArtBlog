@@ -28,23 +28,23 @@ const navItems = [
   },
   {
     name: 'About',
-    href: '../pages/about.html',
+    href: './about.html',
   },
   {
     name: 'Program',
-    href: '../pages/about.html',
+    href: './about.html',
   },
   {
     name: 'Join',
-    href: '../pages/about.html',
+    href: './about.html',
   },
   {
     name: 'Sponsor',
-    href: '../pages/about.html',
+    href: './about.html',
   },
   {
     name: 'News',
-    href: '../pages/about.html',
+    href: './about.html',
   },
 ];
 
