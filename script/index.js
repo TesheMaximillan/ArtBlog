@@ -53,13 +53,8 @@ const navItems = [
 
 for (let i = 0; i < navItems.length; i += 1) {
   const li = document.createElement('li');
-  const a = document.createElement('a');
-  a.textContent = navItems[i].name;
-  a.addEventListener('click', () => {
-    window.location.replace(navItems[i].href);
-  });
   li.className = 'nav-link';
-  li.appendChild(a);
+  li.innerHTML = `<a href=${navItems[i].href}>${navItems[i].name}</a>`;
   ul.appendChild(li);
 }
 
