@@ -24,27 +24,27 @@ ul.classList.add('header-nav-container__nav-bar--link', 'nav-mobile');
 const navItems = [
   {
     name: 'Home',
-    href: 'index.html',
+    href: '../index.html',
   },
   {
     name: 'About',
-    href: 'pages/about.html',
+    href: '../pages/about.html',
   },
   {
     name: 'Program',
-    href: 'pages/about.html',
+    href: '../pages/about.html',
   },
   {
     name: 'Join',
-    href: 'pages/about.html',
+    href: '../pages/about.html',
   },
   {
     name: 'Sponsor',
-    href: 'pages/about.html',
+    href: '../pages/about.html',
   },
   {
     name: 'News',
-    href: 'pages/about.html',
+    href: '../pages/about.html',
   },
 ];
 
@@ -52,7 +52,9 @@ for (let i = 0; i < navItems.length; i += 1) {
   const li = document.createElement('li');
   const a = document.createElement('a');
   a.textContent = navItems[i].name;
-  a.href = navItems[i].href;
+  a.addEventListener('click', () => {
+    window.location.replace(navItems[i].href);
+  });
   li.className = 'nav-link';
   li.appendChild(a);
   ul.appendChild(li);
