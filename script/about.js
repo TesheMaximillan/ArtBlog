@@ -24,7 +24,11 @@ ul.classList.add('header-nav-container__nav-bar--link', 'nav-mobile');
 const navItems = [
   {
     name: 'Home',
+<<<<<<< HEAD
     href: '/index.html',
+=======
+    href: '../',
+>>>>>>> cb66fc479211d1bb9fb89cbf6f5ac9c9158936fe
   },
   {
     name: 'About',
