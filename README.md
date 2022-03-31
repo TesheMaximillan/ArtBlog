@@ -34,7 +34,7 @@
 
 ## Screenshot
 
-![project screenshot](https://user-images.githubusercontent.com/51437483/157740992-5c2e5ed6-4828-46ab-bdfc-e7f148842850.jpg)
+![Artblog screenshot](https://user-images.githubusercontent.com/51437483/161064540-3f51158b-497c-494c-997e-c19004b7cb37.JPG)
 
 # Author
 
